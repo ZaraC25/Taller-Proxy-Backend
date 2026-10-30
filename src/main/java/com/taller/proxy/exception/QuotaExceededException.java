@@ -1,0 +1,9 @@
+package com.taller.proxy.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.PAYMENT_REQUIRED)
+public class QuotaExceededException extends RuntimeException {
+    public QuotaExceededException(String msg) { super(msg); }
+}
